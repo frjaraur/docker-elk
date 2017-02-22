@@ -17,6 +17,7 @@ services:
       - ./logstash/config:/etc/logstash/conf.d
     ports:
       - "5000:5000"
+      - "5005:5005"
     networks:
       - docker_elk
     depends_on:
