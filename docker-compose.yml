@@ -12,7 +12,7 @@ services:
       - docker_elk
   logstash:
     build: logstash/
-    command: -f /etc/logstash/conf.d/
+    command: -f /etc/logstash/conf.d/ -l log.level debug
     volumes:
       - ./logstash/config:/etc/logstash/conf.d
     ports:
